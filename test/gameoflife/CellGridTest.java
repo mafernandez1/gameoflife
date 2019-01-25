@@ -46,30 +46,31 @@ public class CellGridTest {
         }
     }
 
-//    /**
-//     * Test of beginGameOfLife method, of class CellGrid.
-//     */
-//    @Test
-//    public void testBeginGameOfLife() {
-//        System.out.println("beginGameOfLife");
-//        CellGrid instance = new CellGrid();
-//        instance.setRowNumber(10);
-//        instance.setColumnNumber(15);
-//        instance.setNumGeneration(10);
-//        int[][] testCellGrid = new int[10][15];
-//        testCellGrid[4][3] = 1;
-//        testCellGrid[4][4] = 1;
-//        testCellGrid[4][5] = 1;
-//        testCellGrid[4][6] = 1;
-//        testCellGrid[4][7] = 1;
-//        testCellGrid[4][8] = 1;
-//        testCellGrid[4][9] = 1;
-//        testCellGrid[4][10] = 1;
-//        testCellGrid[4][11] = 1;
-//        testCellGrid[4][12] = 1;
-//        instance.setCells(testCellGrid);
-//        instance.beginGameOfLife();
-//    }
+    /**
+     * Test of beginGameOfLife method, of class CellGrid.
+     */
+    @Test
+    public void testBeginGameOfLifeTenCells() {
+        System.out.println("beginGameOfLife");
+        CellGrid instance = new CellGrid();
+        instance.setRowNumber(17);
+        instance.setColumnNumber(18);
+        instance.setNumGeneration(10);
+        int[][] testCellGrid = new int[17][18];
+        testCellGrid[8][4] = 1;
+        testCellGrid[8][5] = 1;
+        testCellGrid[8][6] = 1;
+        testCellGrid[8][7] = 1;
+        testCellGrid[8][8] = 1;
+        testCellGrid[8][9] = 1;
+        testCellGrid[8][10] = 1;
+        testCellGrid[8][11] = 1;
+        testCellGrid[8][12] = 1;
+        testCellGrid[8][13] = 1;
+        instance.setCells(testCellGrid);
+        instance.beginGameOfLife();
+    }
+
     /**
      * Test of beginGameOfLife method, of class CellGrid.
      */
@@ -77,13 +78,13 @@ public class CellGridTest {
     public void testBeginGameOfLife() {
         System.out.println("beginGameOfLife");
         CellGrid instance = new CellGrid();
-        instance.setRowNumber(3);
-        instance.setColumnNumber(3);
+        instance.setRowNumber(7);
+        instance.setColumnNumber(7);
         instance.setNumGeneration(7);
-        int[][] testCellGrid = new int[3][3];
-        testCellGrid[1][0] = 1;
-        testCellGrid[1][1] = 1;
-        testCellGrid[1][2] = 1;
+        int[][] testCellGrid = new int[instance.getRowNumber()][instance.getColumnNumber()];
+        testCellGrid[3][2] = 1;
+        testCellGrid[3][3] = 1;
+        testCellGrid[3][4] = 1;
         instance.setCells(testCellGrid);
         instance.beginGameOfLife();
     }
