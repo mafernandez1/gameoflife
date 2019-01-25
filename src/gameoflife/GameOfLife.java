@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package gameoflife;
 
 /**
  *
- * @author misaf
+ * @author Misahael Fernandez
  */
 public class GameOfLife {
 
@@ -16,7 +11,9 @@ public class GameOfLife {
      */
     public static void main(String[] args) {
         CellGrid cellGrid = new CellGrid();
+        // Read the necessary data and initialise the grid
         cellGrid.readInitialise();
+        // Main process
         cellGrid.beginGameOfLife();
     }
 
