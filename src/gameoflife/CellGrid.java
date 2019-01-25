@@ -108,7 +108,7 @@ public class CellGrid {
                 int columnIndex = columnPosition - columnNeighbour;
                 // Validation to avoid ArrayIndexOutOfBoundsException
                 if (rowIndex >= 0 && columnIndex >= 0 && rowIndex < rowNumber && columnIndex < columnNumber) {
-                    // If the neighbour is alive, augment 1 to the counter
+                    // If the neighbour is alive, add 1 to the counter
                     if (cells[rowIndex][columnIndex] != 0) {
                         aliveNeighbour++;
                     }
@@ -119,7 +119,7 @@ public class CellGrid {
         // Given that we are counting the current cell we must subtract the value in the current position. Either 0 or 1.
         aliveNeighbour -= cells[rowPosition][columnPosition];
 
-        // Source: Attached document from email "BBC Resourcing Team <Nicola.Key@bbc.co.uk>"
+        // Source: Attached document from email
         // Scenario 0: No interactions
         // Given a game of life
         // When there are no live cells
