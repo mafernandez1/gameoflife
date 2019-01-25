@@ -7,6 +7,6 @@
 
 # Test
 The file called *CellGridTest.java* has three test scenarios:
-- All cells are dead when the grid are initialised
+- All cells are dead when the grid is initialised
 - Game of life using the initial state of *10 Cell Row*
 - Game of life using the initial state provided as an example in the attached document (Scenario 6).
