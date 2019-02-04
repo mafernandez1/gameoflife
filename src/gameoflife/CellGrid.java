@@ -98,8 +98,8 @@ public class CellGrid {
     private void setAliveDeathCell(int rowPosition, int columnPosition, int[][] nextCellGrid) {
         // Count how many alive neighbours are
         int aliveNeighbour = 0;
-        // Since we need to look up for the inmediate neighbours if the current cell, we have to subtract 1 and add 1.
-        // The two for loops look up for all the eight neighbours around the current cell.
+        // Since we need to look up for the inmediate neighbours in the current cell, we have to subtract 1 and add 1.
+        // The two for loops look up for all the neighbours around the current cell.
         for (int rowNeighbour = -1; rowNeighbour <= 1; rowNeighbour++) {
             for (int columnNeighbour = -1; columnNeighbour <= 1; columnNeighbour++) {
                 // The first value of the two for loops are -1. Therefore, we subtact 1 and as the loop continues we ended with adding 1.
@@ -109,7 +109,7 @@ public class CellGrid {
                 // Validation to avoid ArrayIndexOutOfBoundsException
                 if (rowIndex >= 0 && columnIndex >= 0 && rowIndex < rowNumber && columnIndex < columnNumber) {
                     // If the neighbour is alive and if the current position is different for the current neighbour,
-                    // add 1 to the counter. The las validation ensures that we are not counting the current cell, only neighbours
+                    // add 1 to the counter. The last validation ensures that we are not counting the current cell, only neighbours
                     // of that cell.
                     if (cells[rowIndex][columnIndex] != 0 && (rowIndex != rowPosition || columnIndex != columnPosition)) {
                         aliveNeighbour++;
